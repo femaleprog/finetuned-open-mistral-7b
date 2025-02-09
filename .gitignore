@@ -123,7 +123,7 @@ __pycache__/
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
-
+secrets.toml
 # SageMath parsed files
 *.sage.py
 

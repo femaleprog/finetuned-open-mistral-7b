@@ -5,14 +5,18 @@ from typing import List
 import uvicorn
 from mistralai import Mistral
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 app = FastAPI()
 
 # Mistral API key
-api_key = os.getenv("MISTRAL_API_KEY")
+#api_key = os.getenv("MISTRAL_API_KEY")
 # fine-tuned model ID
-fine_tuned_model_id = os.getenv("FINE_TUNED_MODEL_ID")
+#fine_tuned_model_id = os.getenv("FINE_TUNED_MODEL_ID")
+
+api_key = st.secrets["MISTRAL_API_KEY"]
+fine_tuned_model_id = st.secrets["FINE_TUNED_MODEL_ID"]
 
 print("🔍 Debug: FINE_TUNED_MODEL =", fine_tuned_model_id)
 print("🔍 Debug: OPENAI_API_KEY =", api_key)
