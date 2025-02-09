@@ -3,3 +3,5 @@ pydantic
 uvicorn
 mistralai
 python-dotenv
+streamlit
+requests
