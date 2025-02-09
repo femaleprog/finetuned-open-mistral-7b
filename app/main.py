@@ -10,6 +10,8 @@ import streamlit as st
 load_dotenv()
 app = FastAPI()
 
+st.write("MISTRAL_API_KEY:", st.secrets.get("MISTRAL_API_KEY", "❌ Not Found"))
+st.write("FINE_TUNED_MODEL_ID:", st.secrets.get("FINE_TUNED_MODEL_ID", "❌ Not Found"))
 # Mistral API key
 #api_key = os.getenv("MISTRAL_API_KEY")
 # fine-tuned model ID
